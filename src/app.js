@@ -22,23 +22,23 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Weather',
-        name: 'Old Robot'
+        title: 'Weather Forecast',
+        name: 'Wendy'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
-        name: 'Old Robot'
+        title: 'About',
+        name: 'Wendy'
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpMessage: 'The Application are using Real-Time & Historical World Weather Data API #WeatherStack.',
+        helpMessage: 'This project is only for learning purposes. Please don\'t contact me if you need any help. ',
         title: 'Help',
-        name: 'Old Robot'
+        name: 'Wendy'
     });
 });
 
@@ -70,7 +70,7 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Old Robot',
+        name: 'Wendy',
         errorMessage: 'Help article not found.'
     });
 });
@@ -78,7 +78,7 @@ app.get('/help/*', (req, res) => {
 app.get('/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Old Robot',
+        name: 'Wendy',
         errorMessage: 'Page not found.'
     });
 });
