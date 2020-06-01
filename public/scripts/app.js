@@ -15,7 +15,10 @@ weatherForm.addEventListener('submit', (e) => {
                 icon.src='';
             }else {
                 messageOne.textContent  = data.location;
-                messageTwo.textContent  = data.forecast;
+                messageTwo.innerText  = data.forecast+'\n'+
+                data.degree+'\n'+
+                data.humidity+'\n'+
+                data.uv_index;
                 icon.src = data.icon;
 
             }

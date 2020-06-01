@@ -9,12 +9,19 @@
     <body>
         <div class="main-content">
             {{>header}}
-            <p>Use this site to get your weather forecast!</p>
-            <form>
-                <input type="text" placeholder="Location"><button>Search</button>
-            </form>
-            <p id="message-1"></p>
-            <img id="icon"><p id="message-2"></p>
+            <center>
+                <p>Use this site to get your weather forecast!</p>
+                <div>
+                    <form>
+                        <input type="text" placeholder="Location"><button>Search</button>
+                    </form>
+                    <h5 id="message-1"></h5>
+                </div>
+                <div>
+                    <img id="icon" style="margin-right: 16px" class="inline">
+                    <p id="message-2" class="inline" style="text-align: left;"></p>
+                </div>
+            </center>
         </div>
         {{>footer}}
         <script src="/scripts/app.js"></script>

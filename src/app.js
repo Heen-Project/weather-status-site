@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About',
+        title: 'About Page',
         name: 'Wendy'
     });
 });
@@ -37,7 +37,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         helpMessage: 'This project is only for learning purposes. Please don\'t contact me if you need any help. ',
-        title: 'Help',
+        title: 'Help Page',
         name: 'Wendy'
     });
 });
@@ -58,6 +58,9 @@ app.get('/weather', (req, res) => {
             }
             res.send({
                 forecast: forecastData.description,
+                degree: forecastData.degree,
+                humidity: forecastData.humidity,
+                uv_index: forecastData.uv_index,
                 icon: forecastData.icon,
                 location,
                 address: req.query.address,

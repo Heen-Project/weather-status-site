@@ -9,9 +9,11 @@
     <body>
         <div class="main-content">
             {{>header}}
-            <img src="./images/robot.png" alt="Robot Image" class="portrait">
-            <p>This site was created by {{name}}. Together with the old robot as shown in the above picture.</p>
-            <p>The application are using data from mapbox.com and weatherstack.com</p>
+            <img src="./images/robot.png" alt="Robot Image" class="portrait" style="vertical-align:middle">
+            <div class="inline" style="width: 400px; margin-left: 20px; vertical-align:middle">
+                <p>This site was created by {{name}}. Together with the old robot as shown on the left side.</p>
+                <p>The application are using data from mapbox.com and weatherstack.com</p>
+            </div>
         </div>
         {{>footer}}
     </body>
