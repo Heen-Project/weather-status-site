@@ -45,6 +45,7 @@ weatherForm.addEventListener('submit', (e) => {
 
 myLocation.addEventListener('click', (e) => {
     e.preventDefault();
+    search.value = '';
     disableInput();
     if (!navigator.geolocation) { // mdn geolocation
         enableInput();
