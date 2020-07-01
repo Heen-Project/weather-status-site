@@ -57,11 +57,7 @@ app.get('/weather', (req, res) => {
                 return res.send({error});
             }
             res.send({
-                forecast: forecastData.description,
-                degree: forecastData.degree,
-                humidity: forecastData.humidity,
-                uv_index: forecastData.uv_index,
-                icon: forecastData.icon,
+                ...forecastData,
                 location,
                 address: req.query.address,
             });
@@ -69,6 +65,15 @@ app.get('/weather', (req, res) => {
     });
 });
 
+app.get('/my-location', (req, res) => {
+    const { latitude, longitude } = req.query
+    forecast(latitude, longitude, (error, forecastData) => {
+        if (error){
+            return res.send({ error });
+        }
+        res.send(forecastData);
+    });
+})
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
