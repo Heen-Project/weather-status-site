@@ -66,5 +66,8 @@ myLocation.addEventListener('click', (e) => {
             }
             enableInput();
         });
+    }, (error) => {
+        enableInput();
+        messageOne.textContent = error.message;
     });
 });
