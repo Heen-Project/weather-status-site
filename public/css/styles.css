@@ -58,3 +58,33 @@ button {
 .inline{
     display:inline-block;
 }
+
+.inline--about{
+    margin-left: 50px;
+    max-width: 400px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    body{
+        padding: 0 25px;
+        margin: 0;
+    }
+    .about-content{
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+    }
+    .inline--about{
+        text-align: center;
+        text-justify: inter-word;
+        margin: 0;
+        width: 80%;
+        padding: 0 0 0 10%;
+    }
+}
